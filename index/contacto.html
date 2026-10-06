@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-folder - Contacto</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img class="logo__img" src="../assets/img/logo.jpg" alt="Logo de Pagina">
+            </a>
+            <h1 class="titulo-seccion">Contacto</h1>
+
+            <ul class="barra-nav">
+                <li><a class="nav-link" href="index.html#sobre-mi">Sobre mí</a></li>
+                <li><a class="nav-link" href="trayectoria.html">Trayectoria</a></li>
+                <li><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto-main">
+        <section class="tarjeta-contacto">
+            <h2>Contactame</h2>
+            <p>
+                Si tienes alguna consulta, propuesta laboral o deseas colaborar en algún proyecto, ¡envíame un mensaje!
+            </p>
+
+            <form action="https://formspree.io/f/mwlvvovr" method="POST" class="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo del contacto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
