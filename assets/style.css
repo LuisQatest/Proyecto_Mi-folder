@@ -1,3 +1,4 @@
+/* ===== GLOBAL ===== */
 * {
     box-sizing: border-box;
 }
@@ -10,24 +11,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
+a, a:visited {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     border-radius: 12px;
-    margin: 0 auto 1.5rem auto;
-    margin-top: 1.5rem;
+    margin: 1.5rem auto;
     background-color: #111925;
-    box-sizing: border-box;
     max-width: 1200px;
     width: 100%;
-
 }
 
 nav ul {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 1rem;
@@ -75,38 +79,30 @@ nav ul {
 }
 
 
+
 .perfil-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 290px 1fr; 
+    grid-template-columns: 290px 1fr;
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-
-.columna-perfil {
-    background-color: #111925; 
-    border-radius: 8px;        
-    padding: 1.5rem;          
-}
-
-
+.columna-perfil,
 .columna-contenido {
-    background-color: #111925; 
+    background-color: #111925;
     border-radius: 8px;
     padding: 1.5rem;
 }
 
-
 .avatar {
-    width: 220px;          
-    height: 220px;         
-    object-fit: cover;     
-    border-radius: 50%;   
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
     border: 1px solid #30363d;
 }
-
 
 .nombre {
     font-size: 1.5rem;
@@ -120,7 +116,6 @@ nav ul {
     margin-top: 0;
 }
 
-
 .bio {
     font-size: 0.9rem;
     color: #c9d1d9;
@@ -128,9 +123,8 @@ nav ul {
     margin: 1rem 0;
 }
 
-
 .lista-contacto {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     font-size: 0.85rem;
 }
@@ -138,41 +132,6 @@ nav ul {
 .lista-contacto li {
     margin-bottom: 0.5rem;
 }
-
-a, a:visited {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-
-@media (max-width: 768px) {
-    .perfil-container {
-        grid-template-columns: 1fr; 
-    }
-
-    .avatar {
-        max-width: 200px; 
-        height: auto;
-    }
-
-    nav ul {
-     display: flex;
-     flex-wrap: wrap; 
-     align-items: center;
-     gap: 1rem;
-     padding: 0.5rem 1rem;
-     margin: 0;
-     list-style: none;
-    }
-
-     .footer-content {
-        flex-direction: column;
-        gap: 0.8rem;
-        text-align: center;
-    }
-}
-
-
 
 .contacto-main {
     display: flex;
@@ -182,9 +141,7 @@ a, a:visited {
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
-    box-sizing: border-box;
 }
-
 
 .contacto-main .tarjeta-contacto {
     background-color: #161b22;
@@ -192,9 +149,7 @@ a, a:visited {
     border-radius: 8px;
     padding: 2rem;
     width: 100%;
-    box-sizing: border-box;
 }
-
 
 .contacto-main .tarjeta-contacto h2 {
     color: #f0f6fc;
@@ -209,7 +164,6 @@ a, a:visited {
     margin-bottom: 1.5rem;
     line-height: 1.4;
 }
-
 
 .contacto-main .form-contacto {
     display: flex;
@@ -231,11 +185,9 @@ a, a:visited {
     font-weight: 600;
 }
 
-
 .contacto-main .form-group input,
 .contacto-main .form-group textarea {
     width: 100%;
-    box-sizing: border-box;
     background-color: #0d1117;
     border: 1px solid #30363d;
     border-radius: 6px;
@@ -252,7 +204,6 @@ a, a:visited {
     border-color: #58a6ff;
     box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
 }
-
 
 .contacto-main .btn-submit {
     background-color: #238636;
@@ -272,7 +223,6 @@ a, a:visited {
     background-color: #2ea043;
 }
 
-
 .contacto-main .tarjeta-wip {
     background-color: #161b22;
     border: 1px solid #30363d;
@@ -280,9 +230,7 @@ a, a:visited {
     padding: 3rem 2rem;
     width: 100%;
     text-align: center;
-    box-sizing: border-box;
 }
-
 
 .contacto-main .tarjeta-wip p {
     color: #f0f6fc;
@@ -307,16 +255,6 @@ footer {
     gap: 1.5rem;
 }
 
-.footer-links a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-
 footer ul {
     list-style: none;
     padding: 0;
@@ -326,12 +264,41 @@ footer ul {
     gap: 1.5rem;
 }
 
-
-footer a {
+footer a,
+.footer-links a {
     color: #58a6ff;
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover,
+.footer-links a:hover {
     text-decoration: underline;
 }
+
+
+@media (max-width: 768px) {
+    .perfil-container {
+        grid-template-columns: 1fr;
+    }
+
+    .avatar {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+}
+
+.formacion-experiencia {
+    background-color: #111925;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 5rem;
+    margin-top: 1rem;
+}
+
+
